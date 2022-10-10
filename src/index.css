@@ -1,13 +1,682 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+      @apply font-[Raleway]
+  }
+  li {
+      @apply px-4 ;
+      @apply cursor-pointer
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-title {
+  position: absolute;
+  width: 35%;
+  height: 80%;
+  bottom: 0;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.apply-now {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.title1 {
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.title2 {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 4px;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.content-admissions {
+  position: absolute;
+  width: 100%;
+  top: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4px;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/******************** Title ********************/
+
+.title-main-title {
+  position: absolute;
+  width: 35%;
+  height: 50%;
+  bottom: 0;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.title-highlight-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 40px 0;
+  /* min-height: 400px; */
+  margin: 0;
+  width: 650px;
+}
+
+.title-text {
+  flex: 1;
+  background: #DABD78;
+  min-height: inherit;
+  position: relative;
+  bottom: 40px;
+  left: 60px;
+  display: block;
+  width: 100%;
+}
+
+.nohover-title-text {
+  flex: 1;
+  background: transparent;
+  min-height: inherit;
+  position: relative;
+  bottom: 40px;
+  left: 60px;
+  display: block;
+  width: 100%;
+}
+
+.title-text-content {
+  padding: 30px 30px 30px 30px;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+}
+
+.title-title {
+  color: #ffffff;
+  font-size: 24px;
+  width: 100%;
+}
+
+.title-subtitle {
+  font-size: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: #ffffff;
+  padding-bottom: 20px;
+  display: block;
+  margin-top: 12px;
+}
+
+.title-button-container {
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+.title-button-main {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 25px 40px;
+  background: #3A5B44;
+}
+
+/******************** Students ********************/
+
+.students-banner {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  min-height: 400px;
+  max-width: 1152px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.students-description-container {
+  left: -40px;
+  flex: 1;
+  background: #DABD78;
+  min-height: inherit;
+  position: relative;
+  bottom: 30px;
+}
+
+.students-description-content {
+  padding: 40px 40px 60px 40px;
+}
+
+.students-desc {
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.students-image-container {
+  flex: 2;
+  display: flex;
+  min-height: inherit;
+}
+
+.students-image-container-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.students-button-container {
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+}
+
+.students-button-main {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 25px 40px;
+  background: #3A5B44;
+}
+
+/******************** COVID News ********************/
+
+.covid-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  min-height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.covid-3-boxes {
+  display: flex;
+  align-items: center;
+  margin: 0-1%;
+  flex-wrap: wrap;
+}
+
+.covid-box {
+  flex: 0 0 31%;
+  margin: 1%;
+  position: relative;
+  border: solid 1px #fff;
+}
+
+.covid-img {
+  position: relative;
+  display: block;
+}
+
+.covid-img-box {
+  object-fit: contain;
+  width: 100%;
+  height: 150px;
+}
+
+.covid-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 48px;
+  text-transform: capitalize;
+  color: #3A5B44;
+  padding: 15px 20px;
+  display: block;
+  z-index: 3;
+}
+
+.covid-box-desc {
+  padding: 0 20px 20px 20px;
+  color: #3A5B44;
+  font-style: normal;
+  font-weight: normal;
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  z-index: 2;
+}
+
+.covid-box-buttons {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.covid-box-buttons-container {
+  margin-left: 10px;
+  text-align: center;
+}
+
+.covid-box-buttons-main {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 25px 40px;
+  background: #3A5B44;
+}
+
+/******************** Recent News ********************/
+
+.section-header {
+  position: relative;
+  z-index: 4;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 45px;
+  line-height: 26px;
+  padding: 0 40px;
+}
+
+.section-header-title {
+  color: #3A5B44;
+  letter-spacing: 0;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.container {
+  /* display: block; */
+  /* width: 90%; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  white-space: normal;
+  scroll-behavior: smooth;
+  position: relative;
+  height: 100%;
+}
+
+.highlight-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 40px 0;
+  min-height: 400px;
+  margin: 0;
+}
+
+.h-text {
+  flex: 1;
+  background: #DABD78;
+  min-height: inherit;
+  position: relative;
+  bottom: 40px;
+  left: 60px;
+  display: block;
+}
+
+.h-img {
+  flex: 2;
+  display: flex;
+  /* min-height: inherit; */
+  object-fit: cover;
+  min-width: 500px;
+  height: 420px;
+}
+
+.h-text-content {
+  padding: 40px 40px 60px 40px;
+  display: block;
+  font-size: 16px;
+}
+
+.h-title {
+  color: #ffffff;
+  font-size: 45px;
+}
+
+.h-subtitle {
+  font-size: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.h-button-container {
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+.h-button-main {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 25px 40px;
+  background: #3A5B44;
+}
+
+/******************** About CMCC ********************/
+
+.about-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.about-description {
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  color: #3A5B44;
+  margin: 0 auto;
+}
+
+.about-tiles {
+  margin-bottom: 0!important;
+  max-width: 1488px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.about-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.about-list {
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.about-track {
+  width: 1440px;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-active {
+  outline: none;
+  width: 360;
+  display: block;
+  float: left;
+}
+
+.about-grid {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding-right: 4px;
+}
+
+.about-image {
+  /* height: 100%; */
+  height: 300px;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  z-index: 999;
+}
+
+.box-img {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.box-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 42px;
+  padding: 0 30px;
+  color: #ffffff;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/******************** Footer ********************/
+
+.site-footer {
+  background-color: #0e0e0e;
+  color: #8996a0;
+  padding-bottom: 64px;
+  padding-top: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.l-container-site-footer-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.site-footer-row-site-footer-row-navigation {
+  margin: 0 auto;
+  display: flex;
+  max-width: 848px;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.site-footer-row-site-footer-row-secondary {
+  align-items: flex-end;
+  flex-direction: row;
+  display: flex;
+}
+
+.site-footer-copyright {
+  font-size: 16px;
+  justify-content: flex-start;
+  width: 33.33%;
+  order: 1;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.2px;
+  line-height: 1.5;
+  align-items: center;
+  display: flex;
+}
+
+.site-footer-logo {
+  margin-bottom: 0;
+  width: 33.33%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+
+.site-footer-social {
+  justify-content: flex-end;
+  order: 3;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 33.33%;
+  align-items: center;
+  display: flex;
+}
+
+.site-footer-menu-col {
+  padding-bottom: 48px;
+  width: 33.33%;
+}
+
+.social-follow-list {
+  display: flex;
+}
+
+.social-follow-item-social-follow-item {
+  font-size: normal;
+  font-weight: 400;
+  letter-spacing: -.2px;
+  line-height: 1.5;
+  color: #8996a0;
+  font-size: 16px;
+  margin-right: 18px;
+} 
+
+.social-follow-anchor {
+  border-bottom: 1px solid transparent;
+  color: #8996a0;
+  padding-bottom: 2px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.social-icon {
+  margin-right: 6px;
+}
+
+.site-footer-menu-heading {
+  color: #f3f4f4;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.site-footer-nav-list {
+  text-align: center;
+}
+
+.footer-one-item {
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer-one-action {
+  border-bottom: 1px solid transparent;
+  color: #8996a0;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.footer-logo-and-location {
+  width: 125px;
+  height: auto;
+}
+
+/******************** Accessibility Button ********************/
+
+.accessibility-btn {
+  display: flex;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #146ff8;
+  color: #FFF;
+  justify-content: center;
+  align-items: center;
+  left: 99%;
+  top: 98%;
+  transform: translate(-99%, -98%);
+  cursor: pointer;
+  z-index: 99999;
 }
